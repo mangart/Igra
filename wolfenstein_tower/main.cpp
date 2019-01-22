@@ -3,6 +3,8 @@
 #include <string>
 #include <sstream>
 #include "Enemie.h"
+#include "Fizika.h"
+#include <vector>
 
 int zivljenja = 100;
 int stanje_igre = 2;
@@ -10,10 +12,12 @@ int denar = 600;
     sf::RenderWindow win(sf::VideoMode(1800, 900), "Wolfenstein tower");
     sf::Texture guard;
     sf::Texture ss;
+    sf::Texture oficer;
     sf::Texture ozadje;
     sf::Texture obraz;
 std::stringstream ziv;
 std::stringstream den;
+sf::Clock casZanke;
 
 int main()
 {
@@ -34,6 +38,10 @@ if(!ozadje.loadFromFile("sprites/PC Computer - Wolfenstein 3D - Walls.png")){
 }
 
 if(!obraz.loadFromFile("sprites/PC Computer - Wolfenstein 3D - BJ Blazkowicz.png")){
+    std::cout << "Neki je narobe!";
+}
+
+if(!oficer.loadFromFile("sprites/PC Computer - Wolfenstein 3D - BJ Blazkowicz.png")){
     std::cout << "Neki je narobe!";
 }
 
@@ -118,11 +126,25 @@ obr.setPosition(1510.f,50.f);
 obr.setScale(sf::Vector2f(2.5f,2.5f));
 win.setFramerateLimit(60);
 
-Enemie enemie(guard,10,10,10,3,-30.f,625.f);
-Enemie enemie1(ss,10,10,10,2,448.f, 400.f);
-
+Enemie enemie(guard,10,10,50,3,-30.f,625.f,300);
+Enemie enemie1(ss,10,10,100,3,-200.f, 625.f,300);
+std::vector<Enemie> enemies;
+enemies.push_back(enemie);
+enemies.push_back(enemie1);
+casZanke.restart();
+Fizika fiz;
     while (win.isOpen())
     {
+
+        ziv.str("");
+        ziv.clear();
+        ziv << zivljenja;
+        den.str("");
+        den.clear();
+        den << denar;
+        text.setString("Zivljenja: " + ziv.str());
+        text1.setString("Denar: " + den.str());
+        float pretCas = casZanke.restart().asSeconds();
         sf::Event event;
         while (win.pollEvent(event))
         {
@@ -131,7 +153,7 @@ Enemie enemie1(ss,10,10,10,2,448.f, 400.f);
                 win.close();
             }
         }
-
+        fiz.premakniNasprotnika(enemies,pretCas);
         win.clear();
         //win.draw(shape);
         win.draw(ozad);
@@ -140,17 +162,21 @@ Enemie enemie1(ss,10,10,10,2,448.f, 400.f);
         win.draw(pot3);
         win.draw(pot4);
         win.draw(pot5);
-        win.draw(nadzorna);
         //win.draw(sprite);
-        win.draw(enemie.slika);
-        win.draw(enemie1.slika);
+        win.draw(enemies[0].slika);
+        win.draw(enemies[1].slika);
         //win.draw(sprite1);
+        win.draw(nadzorna);
         win.draw(text);
         win.draw(text1);
         win.draw(obr);
         win.display();
+        enemies [0].preveriAnimacijo();
+        enemies[1].preveriAnimacijo();
+        /*
         enemie.preveriAnimacijo();
         enemie1.preveriAnimacijo();
+        */
     }
 
     return 0;

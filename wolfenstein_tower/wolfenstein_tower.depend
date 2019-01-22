@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1548000020 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548117050 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
 	<sstream>
 	"Enemie.h"
+	"Fizika.h"
+	<vector>
 
 1525812018 c:\codeblocks\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -415,9 +417,18 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1548000004 source:c:\codeblocks\projects\igra\wolfenstein_tower\enemie.cpp
+1548115864 source:c:\codeblocks\projects\igra\wolfenstein_tower\enemie.cpp
 	"Enemie.h"
 
-1548000004 c:\codeblocks\projects\igra\wolfenstein_tower\enemie.h
+1548115824 c:\codeblocks\projects\igra\wolfenstein_tower\enemie.h
+	<SFML/Graphics.hpp>
+
+1548117232 source:c:\codeblocks\projects\igra\wolfenstein_tower\fizika.cpp
+	"Fizika.h"
+
+1548117232 c:\codeblocks\projects\igra\wolfenstein_tower\fizika.h
+	"Enemie.h"
+	<iostream>
+	<vector>
 	<SFML/Graphics.hpp>
 

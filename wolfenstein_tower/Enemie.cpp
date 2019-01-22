@@ -1,6 +1,6 @@
 #include "Enemie.h"
 
-Enemie::Enemie(sf::Texture &tekstura,int m, int zdr, int hitr, int sm, float x, float y)
+Enemie::Enemie(sf::Texture &tekstura,int m, int zdr, int hitr, int sm, float x, float y, int ani_ref_tim)
 {
     //ctor
     moc = m;
@@ -8,6 +8,9 @@ Enemie::Enemie(sf::Texture &tekstura,int m, int zdr, int hitr, int sm, float x, 
     hitrost = hitr;
     slicica = 0;
     smer = sm;
+    na_poti = 1;
+    stanje = 1;
+    AnimationRefreshTime = ani_ref_tim;
     slika.setTexture(tekstura);
     slika.setTextureRect(sf::IntRect(0, 64 * smer, 64, 64));
     // za aèetek nastavi x koordinato na - 75.f
@@ -20,7 +23,7 @@ Enemie::Enemie(sf::Texture &tekstura,int m, int zdr, int hitr, int sm, float x, 
 void Enemie::preveriAnimacijo()
 {
     sf::Time elapsed1 = casAnimacije.getElapsedTime();
-    if(elapsed1.asMilliseconds() > 300){
+    if(elapsed1.asMilliseconds() > AnimationRefreshTime){
         casAnimacije.restart();
         if(slicica == 3){
             slicica = 0;

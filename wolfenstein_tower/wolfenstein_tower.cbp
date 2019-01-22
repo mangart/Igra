@@ -39,6 +39,10 @@
 			<Add library="sfml-system" />
 			<Add directory="C:/CodeBlocks/sfml/lib" />
 		</Linker>
+		<Unit filename="Enemie.cpp" />
+		<Unit filename="Enemie.h" />
+		<Unit filename="Fizika.cpp" />
+		<Unit filename="Fizika.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
