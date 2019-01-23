@@ -5,24 +5,33 @@
 #include "Enemie.h"
 #include "Fizika.h"
 #include <vector>
+#include "Monkey.h"
+#include "Zeblji.h"
+#include "Kontrolni_elementi.h"
+#include "Kontrolni_obraz.h"
+#include "Skrbnik_dogodkov.h"
 
 int zivljenja = 100;
 int stanje_igre = 2;
 int denar = 600;
+int tocke = 0;
     sf::RenderWindow win(sf::VideoMode(1800, 900), "Wolfenstein tower");
     sf::Texture guard;
     sf::Texture ss;
     sf::Texture oficer;
     sf::Texture ozadje;
     sf::Texture obraz;
+    sf::Texture opice_in_glave;
 std::stringstream ziv;
 std::stringstream den;
+std::stringstream toc;
 sf::Clock casZanke;
 
 int main()
 {
     ziv << zivljenja;
     den << denar;
+    toc << tocke;
 
 if (!guard.loadFromFile("sprites/guard_sprite_sheet.png"))
 {
@@ -45,6 +54,10 @@ if(!oficer.loadFromFile("sprites/PC Computer - Wolfenstein 3D - BJ Blazkowicz.pn
     std::cout << "Neki je narobe!";
 }
 
+if(!opice_in_glave.loadFromFile("sprites/glave_in_obrambne_sile.png")){
+    std::cout << "Neki je narobe!";
+}
+
 sf::Font font;
 if (!font.loadFromFile("Arcon-Regular.otf"))
 {
@@ -56,7 +69,7 @@ text.setFont(font); // font is a sf::Font
 text.setString("Zivljenja: " + ziv.str());
 text.setCharacterSize(24); // in pixels, not points!
 text.setFillColor(sf::Color::Red);
-text.setPosition(sf::Vector2f(1600.f, 50.f));
+text.setPosition(sf::Vector2f(1600.f, 70.f));
 
 sf::Text text1;
 text1.setFont(font); // font is a sf::Font
@@ -64,6 +77,13 @@ text1.setString("Denar: " + den.str());
 text1.setCharacterSize(24); // in pixels, not points!
 text1.setFillColor(sf::Color::Red);
 text1.setPosition(sf::Vector2f(1600.f, 100.f));
+
+sf::Text text2;
+text2.setFont(font); // font is a sf::Font
+text2.setString("Tocke: " + toc.str());
+text2.setCharacterSize(24); // in pixels, not points!
+text2.setFillColor(sf::Color::Red);
+text2.setPosition(sf::Vector2f(1600.f, 40.f));
 
 sf::Sprite sprite;
 sprite.setTexture(guard);
@@ -128,9 +148,19 @@ win.setFramerateLimit(60);
 
 Enemie enemie(guard,10,10,50,3,-30.f,625.f,300);
 Enemie enemie1(ss,10,10,100,3,-200.f, 625.f,300);
+
+std::vector<Monkey> monkeys;
+std::vector<Zeblji> vsi_zeblji;
 std::vector<Enemie> enemies;
 enemies.push_back(enemie);
 enemies.push_back(enemie1);
+Monkey opica(opice_in_glave,100,200,200,0);
+Zeblji zebl(opice_in_glave,400,400,10,0);
+
+Kontrolni_elementi opic(opice_in_glave,font,1510,200,0,0,100);
+Kontrolni_elementi zeb(opice_in_glave,font,1640,200,128,0,25);
+Kontrolni_obraz obraz_igralca(opice_in_glave,1510,50);
+
 casZanke.restart();
 Fizika fiz;
     while (win.isOpen())
@@ -142,8 +172,12 @@ Fizika fiz;
         den.str("");
         den.clear();
         den << denar;
+        toc.str("");
+        toc.clear();
+        toc << tocke;
         text.setString("Zivljenja: " + ziv.str());
         text1.setString("Denar: " + den.str());
+        text2.setString("Tocke: " + toc.str());
         float pretCas = casZanke.restart().asSeconds();
         sf::Event event;
         while (win.pollEvent(event))
@@ -169,10 +203,30 @@ Fizika fiz;
         win.draw(nadzorna);
         win.draw(text);
         win.draw(text1);
-        win.draw(obr);
+        win.draw(text2);
+        win.draw(obraz_igralca.slika);
+        //win.draw(obr);
+
+        if(opica.se_izrise == 1)
+        {
+            win.draw(opica.slika);
+        }
+        if(zebl.se_izrise == 1)
+        {
+            win.draw((zebl.slika));
+        }
+        win.draw(opic.kvadrat);
+        win.draw(opic.slika);
+        win.draw(opic.tekst);
+        win.draw(zeb.kvadrat);
+        win.draw(zeb.slika);
+        win.draw(zeb.tekst);
+
+
         win.display();
         enemies [0].preveriAnimacijo();
         enemies[1].preveriAnimacijo();
+        obraz_igralca.posodobiAnimacijo();
         /*
         enemie.preveriAnimacijo();
         enemie1.preveriAnimacijo();
