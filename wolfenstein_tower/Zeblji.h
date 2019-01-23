@@ -10,6 +10,7 @@ class Zeblji
         virtual ~Zeblji();
         int stevilo_dotikov;
         int se_izrise;
+        int stanje;
         sf::Sprite slika;
         void spremeni_pozicijo(float x, float y);
 

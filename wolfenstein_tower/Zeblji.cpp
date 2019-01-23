@@ -12,6 +12,7 @@ Zeblji::Zeblji(sf::Texture &textura, float x, float y, int st_dotik,int izris)
     slika.setPosition(sf::Vector2f(x, y)); // absolute position
     slika.setScale(sf::Vector2f(1.3f, 1.3f));
     slika.setOrigin(sf::Vector2f(32,32));
+    stanje = 1;
 }
 
 void Zeblji::spremeni_pozicijo(float x, float y)

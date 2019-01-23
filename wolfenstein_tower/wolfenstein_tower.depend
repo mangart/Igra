@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548250474 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548268817 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -437,34 +437,41 @@
 	<vector>
 	<SFML/Graphics.hpp>
 
-1548244939 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
+1548268467 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
 	"Monkey.h"
 
 1548244939 c:\codeblocks\projects\igra\wolfenstein_tower\monkey.h
 	<SFML/Graphics.hpp>
 
-1548245194 source:c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.cpp
+1548268467 source:c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.cpp
 	"Zeblji.h"
 
-1548244969 c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.h
+1548268467 c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.h
 	<SFML/Graphics.hpp>
 
-1548247831 source:c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_elementi.cpp
+1548254500 source:c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_elementi.cpp
 	"Kontrolni_elementi.h"
 	<iostream>
 	<string>
 	<sstream>
 
-1548247473 c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_elementi.h
+1548254500 c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_elementi.h
 	<SFML/Graphics.hpp>
 
-1548250084 source:c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_obraz.cpp
+1548250920 source:c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_obraz.cpp
 	"Kontrolni_obraz.h"
 	<time.h>
 
 1548249213 c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_obraz.h
 	<SFML/Graphics.hpp>
 
-1548250529 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
+1548269195 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
+	<iostream>
+	<vector>
 	<SFML/Graphics.hpp>
+	"Monkey.h"
+	"Zeblji.h"
+
+1548269523 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
+	"Skrbnik_dogodkov.h"
 

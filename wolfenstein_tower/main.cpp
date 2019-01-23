@@ -161,8 +161,18 @@ Kontrolni_elementi opic(opice_in_glave,font,1510,200,0,0,100);
 Kontrolni_elementi zeb(opice_in_glave,font,1640,200,128,0,25);
 Kontrolni_obraz obraz_igralca(opice_in_glave,1510,50);
 
+sf::CircleShape krog(200.f);
+krog.setOrigin(sf::Vector2f(200.f,200.f));
+krog.setFillColor(sf::Color(100, 250, 50,128));
+krog.setPosition(sf::Vector2f(200.f,200.f));
+
+
 casZanke.restart();
 Fizika fiz;
+Skrbnik_dogodkov skrbnik;
+
+
+
     while (win.isOpen())
     {
 
@@ -187,6 +197,7 @@ Fizika fiz;
                 win.close();
             }
         }
+        skrbnik.obravnavaj_dogodke(monkeys,vsi_zeblji,krog,opica,zebl,win);
         fiz.premakniNasprotnika(enemies,pretCas);
         win.clear();
         //win.draw(shape);
@@ -209,11 +220,14 @@ Fizika fiz;
 
         if(opica.se_izrise == 1)
         {
+            win.draw(krog);
             win.draw(opica.slika);
         }
         if(zebl.se_izrise == 1)
         {
+            win.draw(krog);
             win.draw((zebl.slika));
+
         }
         win.draw(opic.kvadrat);
         win.draw(opic.slika);
@@ -221,7 +235,14 @@ Fizika fiz;
         win.draw(zeb.kvadrat);
         win.draw(zeb.slika);
         win.draw(zeb.tekst);
-
+        for(unsigned int i = 0; i < monkeys.size();i++)
+        {
+            win.draw(monkeys[i].slika);
+        }
+        for(unsigned int i = 0; i < vsi_zeblji.size();i++)
+        {
+            win.draw(vsi_zeblji[i].slika);
+        }
 
         win.display();
         enemies [0].preveriAnimacijo();
