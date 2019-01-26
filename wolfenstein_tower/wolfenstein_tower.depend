@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548268817 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548521914 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -12,6 +12,7 @@
 	"Kontrolni_elementi.h"
 	"Kontrolni_obraz.h"
 	"Skrbnik_dogodkov.h"
+	"Metek.h"
 
 1525812018 c:\codeblocks\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -422,7 +423,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1548115864 source:c:\codeblocks\projects\igra\wolfenstein_tower\enemie.cpp
+1548532672 source:c:\codeblocks\projects\igra\wolfenstein_tower\enemie.cpp
 	"Enemie.h"
 
 1548115824 c:\codeblocks\projects\igra\wolfenstein_tower\enemie.h
@@ -437,11 +438,16 @@
 	<vector>
 	<SFML/Graphics.hpp>
 
-1548268467 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
+1548522413 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
 	"Monkey.h"
+	<math.h>
 
-1548244939 c:\codeblocks\projects\igra\wolfenstein_tower\monkey.h
+1548521913 c:\codeblocks\projects\igra\wolfenstein_tower\monkey.h
 	<SFML/Graphics.hpp>
+	<iostream>
+	<vector>
+	"Enemie.h"
+	"Metek.h"
 
 1548268467 source:c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.cpp
 	"Zeblji.h"
@@ -472,6 +478,13 @@
 	"Monkey.h"
 	"Zeblji.h"
 
-1548269523 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
+1548270611 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
 	"Skrbnik_dogodkov.h"
+
+1548522429 source:c:\codeblocks\projects\igra\wolfenstein_tower\metek.cpp
+	"Metek.h"
+	<math.h>
+
+1548522413 c:\codeblocks\projects\igra\wolfenstein_tower\metek.h
+	<SFML/Graphics.hpp>
 

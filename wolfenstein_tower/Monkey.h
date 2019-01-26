@@ -2,6 +2,10 @@
 #define MONKEY_H
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include <vector>
+#include "Enemie.h"
+#include "Metek.h"
 
 class Monkey
 {
@@ -14,9 +18,11 @@ class Monkey
         sf::Sprite slika;
         sf::Clock casAnimacije;
         void spremeni_pozicijo(float x,float y);
+        void Umetna_inteligenca(std::vector<Enemie> &enemie,std::vector<Metek> &metki,sf::Texture &tex);
     protected:
 
     private:
+        sf::Clock casUI;
         int zdravje;
         int moc;
 };

@@ -10,6 +10,8 @@
 #include "Kontrolni_elementi.h"
 #include "Kontrolni_obraz.h"
 #include "Skrbnik_dogodkov.h"
+#include "Metek.h"
+
 
 int zivljenja = 100;
 int stanje_igre = 2;
@@ -22,6 +24,7 @@ int tocke = 0;
     sf::Texture ozadje;
     sf::Texture obraz;
     sf::Texture opice_in_glave;
+    sf::Texture orozja;
 std::stringstream ziv;
 std::stringstream den;
 std::stringstream toc;
@@ -55,6 +58,10 @@ if(!oficer.loadFromFile("sprites/PC Computer - Wolfenstein 3D - BJ Blazkowicz.pn
 }
 
 if(!opice_in_glave.loadFromFile("sprites/glave_in_obrambne_sile.png")){
+    std::cout << "Neki je narobe!";
+}
+
+if(!orozja.loadFromFile("sprites/wapons1.png")){
     std::cout << "Neki je narobe!";
 }
 
@@ -144,6 +151,8 @@ obr.setTexture(obraz);
 obr.setTextureRect(sf::IntRect(0,1,24,31));
 obr.setPosition(1510.f,50.f);
 obr.setScale(sf::Vector2f(2.5f,2.5f));
+
+
 win.setFramerateLimit(60);
 
 Enemie enemie(guard,10,10,50,3,-30.f,625.f,300);
@@ -152,6 +161,7 @@ Enemie enemie1(ss,10,10,100,3,-200.f, 625.f,300);
 std::vector<Monkey> monkeys;
 std::vector<Zeblji> vsi_zeblji;
 std::vector<Enemie> enemies;
+std::vector<Metek> metki_igralec;
 enemies.push_back(enemie);
 enemies.push_back(enemie1);
 Monkey opica(opice_in_glave,100,200,200,0);
@@ -171,7 +181,11 @@ casZanke.restart();
 Fizika fiz;
 Skrbnik_dogodkov skrbnik;
 
-
+sf::Sprite orozje1;
+orozje1.setTexture(orozja);
+orozje1.setTextureRect(sf::IntRect(0,128,64,64));
+orozje1.setPosition(50.f,50.f);
+orozje1.setScale(sf::Vector2f(2.5f,2.5f));
 
     while (win.isOpen())
     {
@@ -198,6 +212,12 @@ Skrbnik_dogodkov skrbnik;
             }
         }
         skrbnik.obravnavaj_dogodke(monkeys,vsi_zeblji,krog,opica,zebl,win);
+
+        for(unsigned int i = 0;i < monkeys.size();i++)
+        {
+            monkeys[i].Umetna_inteligenca(enemies,metki_igralec,orozja);
+        }
+
         fiz.premakniNasprotnika(enemies,pretCas);
         win.clear();
         //win.draw(shape);
@@ -208,8 +228,11 @@ Skrbnik_dogodkov skrbnik;
         win.draw(pot4);
         win.draw(pot5);
         //win.draw(sprite);
-        win.draw(enemies[0].slika);
-        win.draw(enemies[1].slika);
+
+        for(unsigned int i = 0;i < enemies.size();i++)
+        {
+            win.draw(enemies[i].slika);
+        }
         //win.draw(sprite1);
         win.draw(nadzorna);
         win.draw(text);
@@ -244,6 +267,10 @@ Skrbnik_dogodkov skrbnik;
             win.draw(vsi_zeblji[i].slika);
         }
 
+        for(unsigned int i = 0;i < metki_igralec.size();i++)
+        {
+            win.draw(metki_igralec[i].slika);
+        }
         win.display();
         enemies [0].preveriAnimacijo();
         enemies[1].preveriAnimacijo();
