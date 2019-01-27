@@ -24,59 +24,62 @@ void Monkey::spremeni_pozicijo(float x, float y)
 
 void Monkey::Umetna_inteligenca(std::vector<Enemie> &enemie, std::vector<Metek> &metki, sf::Texture &tex)
 {
-    int  preteceniCas = casUI.getElapsedTime().asMilliseconds();
-    if(preteceniCas > 500)
+    if(stanje == 1)
     {
-        int x = slika.getPosition().x;
-        int y = slika.getPosition().y;
-        int najblizji_enemieX;
-        int najblizji_enemieY;
-        float razdalja = 100000000;
-        int index_najblizjega = -1;
-        for(unsigned int i = 0; i < enemie.size();i++)
+        int  preteceniCas = casUI.getElapsedTime().asMilliseconds();
+        if(preteceniCas > 500)
         {
-            int enemieX = enemie[i].slika.getPosition().x + 80;
-            int enemieY = enemie[i].slika.getPosition().y + 80;
-            float nova_razdalja = (x - enemieX) * (x - enemieX) + (y - enemieY) * (y - enemieY);
-            nova_razdalja = sqrt(nova_razdalja);
-            if(nova_razdalja < razdalja)
+            int x = slika.getPosition().x;
+            int y = slika.getPosition().y;
+            int najblizji_enemieX;
+            int najblizji_enemieY;
+            float razdalja = 100000000;
+            int index_najblizjega = -1;
+            for(unsigned int i = 0; i < enemie.size();i++)
             {
-                razdalja = nova_razdalja;
-                index_najblizjega = i;
-                najblizji_enemieX = enemieX;
-                najblizji_enemieY = enemieY;
-            }
-        }
-        if(index_najblizjega != -1)
-        {
-            if(razdalja < 400)
-            {
-                int vector_x = najblizji_enemieX - x;
-                int vector_y = najblizji_enemieY - y;
-                int drugi_vektor_x = 0;
-                int drugi_vektor_y = 200;
-                float zgor_del_ulomka = ((vector_x * drugi_vektor_x) + (vector_y * drugi_vektor_y));
-                float spod_del_ulomka = sqrt((vector_x * vector_x) + (vector_y * vector_y)) * sqrt((drugi_vektor_x * drugi_vektor_x) + (drugi_vektor_y * drugi_vektor_y));
-                float kosinus_kota = (zgor_del_ulomka / spod_del_ulomka);
-                float kot = (acos(kosinus_kota) * 180.0) / 3.14159265;
-                if(x < najblizji_enemieX)
+                int enemieX = enemie[i].slika.getPosition().x + 120;
+                int enemieY = enemie[i].slika.getPosition().y + 80;
+                float nova_razdalja = (x - enemieX) * (x - enemieX) + (y - enemieY) * (y - enemieY);
+                nova_razdalja = sqrt(nova_razdalja);
+                if(nova_razdalja < razdalja)
                 {
-                    kot = kot * (-1);
-                }
-                slika.setRotation(kot);
-                if(razdalja < 200)
-                {
-                    slika.setTextureRect(sf::IntRect(64,0,64,64));
-                    Metek met(tex,10,vector_x,vector_y,kot,slika.getPosition().x,slika.getPosition().y,najblizji_enemieX,najblizji_enemieY);
-                    metki.push_back(met);
+                    razdalja = nova_razdalja;
+                    index_najblizjega = i;
+                    najblizji_enemieX = enemieX;
+                    najblizji_enemieY = enemieY;
                 }
             }
+            if(index_najblizjega != -1)
+            {
+                if(razdalja < 400)
+                {
+                    int vector_x = najblizji_enemieX - x;
+                    int vector_y = najblizji_enemieY - y;
+                    int drugi_vektor_x = 0;
+                    int drugi_vektor_y = 200;
+                    float zgor_del_ulomka = ((vector_x * drugi_vektor_x) + (vector_y * drugi_vektor_y));
+                    float spod_del_ulomka = sqrt((vector_x * vector_x) + (vector_y * vector_y)) * sqrt((drugi_vektor_x * drugi_vektor_x) + (drugi_vektor_y * drugi_vektor_y));
+                    float kosinus_kota = (zgor_del_ulomka / spod_del_ulomka);
+                    float kot = (acos(kosinus_kota) * 180.0) / 3.14159265;
+                    if(x < najblizji_enemieX)
+                    {
+                        kot = kot * (-1);
+                    }
+                    slika.setRotation(kot);
+                    if(razdalja < 200)
+                    {
+                        slika.setTextureRect(sf::IntRect(64,0,64,64));
+                        Metek met(tex,200,vector_x,vector_y,kot,slika.getPosition().x,slika.getPosition().y,najblizji_enemieX,najblizji_enemieY);
+                        metki.push_back(met);
+                    }
+                }
+            }
+            casUI.restart();
         }
-        casUI.restart();
-    }
-    else if(preteceniCas > 200)
-    {
-        slika.setTextureRect(sf::IntRect(0,0,64,64));
+        else if(preteceniCas > 200)
+        {
+            slika.setTextureRect(sf::IntRect(0,0,64,64));
+        }
     }
 }
 

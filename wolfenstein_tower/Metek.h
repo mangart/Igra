@@ -13,6 +13,8 @@ class Metek
         int hitrost;
         int smerX;
         int smerY;
+        float normirana_smerX;
+        float normirana_smerY;
         float razdalja;
         float ciljniX;
         float ciljniY;

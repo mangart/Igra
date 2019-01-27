@@ -1,5 +1,5 @@
 #include "Fizika.h"
-
+#include <math.h>
 
 Fizika::Fizika()
 {
@@ -11,7 +11,7 @@ void Fizika::premakniNasprotnika(std::vector<Enemie> &vec,float preteceniCas)
     int neki = 160;
     for(unsigned int i = 0;i < vec.size();i++)
     {
-        if(vec[i].stanje != 3)
+        if(vec[i].stanje == 1)
         {
 
 
@@ -93,6 +93,36 @@ void Fizika::premakniNasprotnika(std::vector<Enemie> &vec,float preteceniCas)
         }
     }
 
+}
+
+
+void Fizika::premakniMetek(std::vector<Metek> &met, float preteceniCas)
+{
+    for(unsigned int i = 0;i < met.size();i++)
+    {
+        if(met[i].stanje == 1)
+        {
+            float x = met[i].slika.getPosition().x;
+            float y = met[i].slika.getPosition().y;
+            float x1 = x + met[i].normirana_smerX * met[i].hitrost * preteceniCas;
+            float y1 = y + met[i].normirana_smerY * met[i].hitrost * preteceniCas;
+            float nova_razdalja = (x1 - met[i].ciljniX) * (x1 - met[i].ciljniX) + (y - met[i].ciljniY) * (y -met[i].ciljniY);
+            nova_razdalja = sqrt(nova_razdalja);
+            if(nova_razdalja < met[i].razdalja)
+            {
+                met[i].slika.setPosition(x1,y1);
+                met[i].razdalja = nova_razdalja;
+            }
+            else if(nova_razdalja < met[i].razdalja + 80)
+            {
+                met[i].slika.setPosition(x1,y1);
+            }
+            else
+            {
+                met[i].stanje = 2;
+            }
+        }
+    }
 }
 
 Fizika::~Fizika()

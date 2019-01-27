@@ -218,7 +218,8 @@ orozje1.setScale(sf::Vector2f(2.5f,2.5f));
             monkeys[i].Umetna_inteligenca(enemies,metki_igralec,orozja);
         }
 
-        fiz.premakniNasprotnika(enemies,pretCas);
+        fiz.premakniNasprotnika(enemies,pretCas + casZanke.getElapsedTime().asSeconds());
+        fiz.premakniMetek(metki_igralec,pretCas + casZanke.getElapsedTime().asSeconds());
         win.clear();
         //win.draw(shape);
         win.draw(ozad);

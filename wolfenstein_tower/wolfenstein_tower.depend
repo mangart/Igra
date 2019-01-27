@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548521914 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548579999 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
 	<string>
@@ -429,16 +429,18 @@
 1548115824 c:\codeblocks\projects\igra\wolfenstein_tower\enemie.h
 	<SFML/Graphics.hpp>
 
-1548158763 source:c:\codeblocks\projects\igra\wolfenstein_tower\fizika.cpp
+1548589875 source:c:\codeblocks\projects\igra\wolfenstein_tower\fizika.cpp
 	"Fizika.h"
+	<math.h>
 
-1548117232 c:\codeblocks\projects\igra\wolfenstein_tower\fizika.h
+1548578896 c:\codeblocks\projects\igra\wolfenstein_tower\fizika.h
 	"Enemie.h"
 	<iostream>
 	<vector>
 	<SFML/Graphics.hpp>
+	"Metek.h"
 
-1548522413 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
+1548589319 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
 	"Monkey.h"
 	<math.h>
 
@@ -481,10 +483,10 @@
 1548270611 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
 	"Skrbnik_dogodkov.h"
 
-1548522429 source:c:\codeblocks\projects\igra\wolfenstein_tower\metek.cpp
+1548580064 source:c:\codeblocks\projects\igra\wolfenstein_tower\metek.cpp
 	"Metek.h"
 	<math.h>
 
-1548522413 c:\codeblocks\projects\igra\wolfenstein_tower\metek.h
+1548579456 c:\codeblocks\projects\igra\wolfenstein_tower\metek.h
 	<SFML/Graphics.hpp>
 

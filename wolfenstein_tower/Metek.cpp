@@ -18,8 +18,13 @@ Metek::Metek(sf::Texture &tekstura,int hitro,int smerniX,int smerniY,float rotac
     smerY = smerniY;
     ciljniX = ciljX;
     ciljniY = ciljY;
+    float dolzina = (smerX * smerX) + (smerY * smerY);
+    dolzina = sqrt(dolzina);
+    normirana_smerX = smerX / dolzina;
+    normirana_smerY = smerY / dolzina;
     razdalja = (x - ciljX) * (x - ciljX) + (y - ciljY) * (y - ciljY);
     razdalja = sqrt(razdalja);
+    stanje = 1;
 
 }
 

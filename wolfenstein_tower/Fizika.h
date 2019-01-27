@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "Metek.h"
 
 extern int zivljenja;
 
@@ -14,6 +15,7 @@ class Fizika
         Fizika();
         virtual ~Fizika();
         void premakniNasprotnika(std::vector<Enemie> &vec, float preteceniCas);
+        void premakniMetek(std::vector<Metek> &met,float preteceniCas);
 
     protected:
 
