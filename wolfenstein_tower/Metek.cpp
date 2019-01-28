@@ -25,7 +25,30 @@ Metek::Metek(sf::Texture &tekstura,int hitro,int smerniX,int smerniY,float rotac
     razdalja = (x - ciljX) * (x - ciljX) + (y - ciljY) * (y - ciljY);
     razdalja = sqrt(razdalja);
     stanje = 1;
+    slicica = 1;
 
+}
+
+void Metek::preveriAnimacijo()
+{
+     sf::Time elapsed1 = casAnimacije.getElapsedTime();
+    if(elapsed1.asMilliseconds() > 300)
+    {
+        casAnimacije.restart();
+        if(stanje == 3)
+        {
+            if(slicica == 3)
+            {
+                stanje = 4;
+            }
+            else
+            {
+                slicica++;
+            }
+            slika.setTextureRect(sf::IntRect(64 * slicica,64 * 2,64,64));
+        }
+
+    }
 }
 
 Metek::~Metek()

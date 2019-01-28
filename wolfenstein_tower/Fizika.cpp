@@ -20,6 +20,22 @@ void Fizika::premakniNasprotnika(std::vector<Enemie> &vec,float preteceniCas)
             if(vec[i].na_poti == 1)
             {
                 float x1 = x + vec[i].hitrost * preteceniCas;
+
+                if(x < -50 && x1 > -50)
+                {
+                    if(vec[i].tip_nasprotnika == 3)
+                    {
+                        shustafel2.play();
+                    }
+                    else if(vec[i].tip_nasprotnika == 2)
+                    {
+                        spion2.play();
+                    }
+                    else
+                    {
+                        achtung2.play();
+                    }
+                }
                 if(x1 > (601.6 - neki))
                 {
                     vec[i].slika.setPosition((601.6 - neki), y);
@@ -82,7 +98,7 @@ void Fizika::premakniNasprotnika(std::vector<Enemie> &vec,float preteceniCas)
                 if(x1 > (1500 - neki / 4))
                 {
                     vec[i].slika.setPosition((1500 - neki / 4),y);
-                    vec[i].stanje = 3;
+                    vec[i].stanje = 2;
                     zivljenja--;
                 }
                 else

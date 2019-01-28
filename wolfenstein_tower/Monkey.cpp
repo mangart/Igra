@@ -37,16 +37,19 @@ void Monkey::Umetna_inteligenca(std::vector<Enemie> &enemie, std::vector<Metek> 
             int index_najblizjega = -1;
             for(unsigned int i = 0; i < enemie.size();i++)
             {
-                int enemieX = enemie[i].slika.getPosition().x + 120;
-                int enemieY = enemie[i].slika.getPosition().y + 80;
-                float nova_razdalja = (x - enemieX) * (x - enemieX) + (y - enemieY) * (y - enemieY);
-                nova_razdalja = sqrt(nova_razdalja);
-                if(nova_razdalja < razdalja)
+                if(enemie[i].stanje == 1)
                 {
-                    razdalja = nova_razdalja;
-                    index_najblizjega = i;
-                    najblizji_enemieX = enemieX;
-                    najblizji_enemieY = enemieY;
+                    int enemieX = enemie[i].slika.getPosition().x + 120;
+                    int enemieY = enemie[i].slika.getPosition().y + 80;
+                    float nova_razdalja = (x - enemieX) * (x - enemieX) + (y - enemieY) * (y - enemieY);
+                    nova_razdalja = sqrt(nova_razdalja);
+                    if(nova_razdalja < razdalja)
+                    {
+                        razdalja = nova_razdalja;
+                        index_najblizjega = i;
+                        najblizji_enemieX = enemieX;
+                        najblizji_enemieY = enemieY;
+                    }
                 }
             }
             if(index_najblizjega != -1)
@@ -68,6 +71,7 @@ void Monkey::Umetna_inteligenca(std::vector<Enemie> &enemie, std::vector<Metek> 
                     slika.setRotation(kot);
                     if(razdalja < 200)
                     {
+                        strel2.play();
                         slika.setTextureRect(sf::IntRect(64,0,64,64));
                         Metek met(tex,200,vector_x,vector_y,kot,slika.getPosition().x,slika.getPosition().y,najblizji_enemieX,najblizji_enemieY);
                         metki.push_back(met);

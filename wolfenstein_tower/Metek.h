@@ -19,7 +19,8 @@ class Metek
         float ciljniX;
         float ciljniY;
         sf::Clock casAnimacije;
-
+        void preveriAnimacijo();
+        int slicica;
 
     protected:
 

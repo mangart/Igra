@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1548579999 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548689631 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	<iostream>
 	<string>
 	<sstream>
@@ -13,6 +14,8 @@
 	"Kontrolni_obraz.h"
 	"Skrbnik_dogodkov.h"
 	"Metek.h"
+	"Detekcija_trkov.h"
+	"Stopnja.h"
 
 1525812018 c:\codeblocks\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -423,35 +426,37 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1548532672 source:c:\codeblocks\projects\igra\wolfenstein_tower\enemie.cpp
+1548680944 source:c:\codeblocks\projects\igra\wolfenstein_tower\enemie.cpp
 	"Enemie.h"
 
-1548115824 c:\codeblocks\projects\igra\wolfenstein_tower\enemie.h
+1548680904 c:\codeblocks\projects\igra\wolfenstein_tower\enemie.h
 	<SFML/Graphics.hpp>
 
-1548589875 source:c:\codeblocks\projects\igra\wolfenstein_tower\fizika.cpp
+1548672516 source:c:\codeblocks\projects\igra\wolfenstein_tower\fizika.cpp
 	"Fizika.h"
 	<math.h>
 
-1548578896 c:\codeblocks\projects\igra\wolfenstein_tower\fizika.h
+1548665133 c:\codeblocks\projects\igra\wolfenstein_tower\fizika.h
 	"Enemie.h"
 	<iostream>
 	<vector>
 	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
 	"Metek.h"
 
-1548589319 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
+1548668526 source:c:\codeblocks\projects\igra\wolfenstein_tower\monkey.cpp
 	"Monkey.h"
 	<math.h>
 
-1548521913 c:\codeblocks\projects\igra\wolfenstein_tower\monkey.h
+1548665550 c:\codeblocks\projects\igra\wolfenstein_tower\monkey.h
 	<SFML/Graphics.hpp>
 	<iostream>
 	<vector>
 	"Enemie.h"
 	"Metek.h"
+	<SFML/Audio.hpp>
 
-1548268467 source:c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.cpp
+1548685584 source:c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.cpp
 	"Zeblji.h"
 
 1548268467 c:\codeblocks\projects\igra\wolfenstein_tower\zeblji.h
@@ -483,10 +488,136 @@
 1548270611 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
 	"Skrbnik_dogodkov.h"
 
-1548580064 source:c:\codeblocks\projects\igra\wolfenstein_tower\metek.cpp
+1548679621 source:c:\codeblocks\projects\igra\wolfenstein_tower\metek.cpp
 	"Metek.h"
 	<math.h>
 
-1548579456 c:\codeblocks\projects\igra\wolfenstein_tower\metek.h
+1548679527 c:\codeblocks\projects\igra\wolfenstein_tower\metek.h
+	<SFML/Graphics.hpp>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio.hpp
+	<SFML/System.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/Audio/Listener.hpp>
+	<SFML/Audio/Music.hpp>
+	<SFML/Audio/OutputSoundFile.hpp>
+	<SFML/Audio/Sound.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundBufferRecorder.hpp>
+	<SFML/Audio/SoundFileFactory.hpp>
+	<SFML/Audio/SoundFileReader.hpp>
+	<SFML/Audio/SoundFileWriter.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/Audio/SoundStream.hpp>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\inputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<algorithm>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\export.hpp
+	<SFML/Config.hpp>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\listener.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/Vector3.hpp>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\music.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundStream.hpp>
+	<SFML/Audio/InputSoundFile.hpp>
+	<SFML/System/Mutex.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundstream.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Mutex.hpp>
+	<cstdlib>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundsource.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Vector3.hpp>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\alresource.hpp
+	<SFML/Audio/Export.hpp>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\outputsoundfile.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<string>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\sound.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundSource.hpp>
+	<SFML/System/Time.hpp>
+	<cstdlib>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundbuffer.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Time.hpp>
+	<string>
+	<vector>
+	<set>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundbufferrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/SoundBuffer.hpp>
+	<SFML/Audio/SoundRecorder.hpp>
+	<vector>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundrecorder.hpp
+	<SFML/Audio/Export.hpp>
+	<SFML/Audio/AlResource.hpp>
+	<SFML/System/Thread.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<string>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundfilefactory.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+	<vector>
+	<SFML/Audio/SoundFileFactory.inl>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundfilefactory.inl
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundfilereader.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1525812018 c:\codeblocks\sfml\include\sfml\audio\soundfilewriter.hpp
+	<SFML/Audio/Export.hpp>
+	<string>
+
+1548685513 source:c:\codeblocks\projects\igra\wolfenstein_tower\detekcija_trkov.cpp
+	"Detekcija_trkov.h"
+	<math.h>
+
+1548684638 c:\codeblocks\projects\igra\wolfenstein_tower\detekcija_trkov.h
+	<iostream>
+	<vector>
+	"Monkey.h"
+	"Enemie.h"
+	"Metek.h"
+	"Zeblji.h"
+
+1548689505 source:c:\codeblocks\projects\igra\wolfenstein_tower\stopnja.cpp
+	"Stopnja.h"
+	<time.h>
+
+1548688803 c:\codeblocks\projects\igra\wolfenstein_tower\stopnja.h
+	<iostream>
+	<vector>
+	"Enemie.h"
 	<SFML/Graphics.hpp>
 

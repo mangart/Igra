@@ -6,6 +6,9 @@
 #include <vector>
 #include "Enemie.h"
 #include "Metek.h"
+#include <SFML/Audio.hpp>
+
+extern sf::Sound strel2;
 
 class Monkey
 {

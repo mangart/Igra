@@ -5,10 +5,13 @@
 #include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "Metek.h"
 
 extern int zivljenja;
-
+extern sf::Sound achtung2;
+extern sf::Sound spion2;
+extern sf::Sound shustafel2;
 class Fizika
 {
     public:

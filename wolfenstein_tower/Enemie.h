@@ -6,7 +6,7 @@
 class Enemie
 {
     public:
-        Enemie(sf::Texture &tekstura,int m,int zdr,int hitr, int sm,float x, float y,int ani_ref_tim);
+        Enemie(sf::Texture &tekstura,int m,int zdr,int hitr, int sm,float x, float y,int ani_ref_tim,int tip_nasp);
         virtual ~Enemie();
         void preveriAnimacijo();
         int stanje;
@@ -15,13 +15,15 @@ class Enemie
         int smer;
         int na_poti;
         int AnimationRefreshTime;
+        int tip_nasprotnika;
+        int zdravje;
+        int slicica1;
 
     protected:
 
     private:
         sf::Clock casAnimacije;
         sf::Clock casUstvarjanja;
-        int zdravje;
         int moc;
         int slicica;
 };
