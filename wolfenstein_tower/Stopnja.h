@@ -6,6 +6,12 @@
 #include "Enemie.h"
 #include <SFML/Graphics.hpp>
 
+
+extern    std::vector<Enemie> enemies;
+extern    sf::Texture guard;
+extern    sf::Texture ss;
+extern    sf::Texture oficer;
+
 class Stopnja
 {
     public:
@@ -21,7 +27,7 @@ class Stopnja
         int max_hitrost;
         int max_zdravje;
         int max_nasprotnikov;
-        void Naslednji_level(std::vector<Enemie> &enem,sf::Texture &texGuard,sf::Texture &texOficer, sf::Texture &texSS);
+        void Naslednji_level();
 
     protected:
 

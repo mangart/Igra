@@ -17,6 +17,11 @@ class Skrbnik_dogodkov
         virtual ~Skrbnik_dogodkov();
         void obravnavaj_dogodke(std::vector<Monkey> &mon, std::vector<Zeblji> &zeb, sf::CircleShape &krog,Monkey &opica,Zeblji &zebl, sf::RenderWindow &win);
         void obravnavaj_dogodke_v_stanju_dva(std::vector<Monkey> &mon, std::vector<Zeblji> &zeb, sf::CircleShape &krog,Monkey &opica,Zeblji &zebl, sf::RenderWindow &win);
+        void dogodki_v_zacetnem_meniju(sf::RenderWindow &win);
+        void dogodki_v_izbiranju_zahtevnosti(sf::RenderWindow &win);
+        void priprava_na_igro_dogodki(std::vector<Monkey> &mon, std::vector<Zeblji> &zeb, sf::CircleShape &krog,Monkey &opica,Zeblji &zebl, sf::RenderWindow &win);
+        void najboljsi_rezultati_dogodki(sf::RenderWindow &win);
+
     protected:
 
     private:

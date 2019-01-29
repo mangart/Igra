@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548689631 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548775944 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -16,6 +16,8 @@
 	"Metek.h"
 	"Detekcija_trkov.h"
 	"Stopnja.h"
+	"Irisovalnik.h"
+	"Inicializator.h"
 
 1525812018 c:\codeblocks\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -478,15 +480,16 @@
 1548249213 c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_obraz.h
 	<SFML/Graphics.hpp>
 
-1548269195 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
+1548773742 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
 	<iostream>
 	<vector>
 	<SFML/Graphics.hpp>
 	"Monkey.h"
 	"Zeblji.h"
 
-1548270611 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
+1548773810 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
 	"Skrbnik_dogodkov.h"
+	<iostream>
 
 1548679621 source:c:\codeblocks\projects\igra\wolfenstein_tower\metek.cpp
 	"Metek.h"
@@ -611,13 +614,43 @@
 	"Metek.h"
 	"Zeblji.h"
 
-1548689505 source:c:\codeblocks\projects\igra\wolfenstein_tower\stopnja.cpp
+1548767376 source:c:\codeblocks\projects\igra\wolfenstein_tower\stopnja.cpp
 	"Stopnja.h"
 	<time.h>
 
-1548688803 c:\codeblocks\projects\igra\wolfenstein_tower\stopnja.h
+1548767376 c:\codeblocks\projects\igra\wolfenstein_tower\stopnja.h
 	<iostream>
 	<vector>
 	"Enemie.h"
 	<SFML/Graphics.hpp>
+
+1548775553 source:c:\codeblocks\projects\igra\wolfenstein_tower\irisovalnik.cpp
+	"Irisovalnik.h"
+
+1548775553 c:\codeblocks\projects\igra\wolfenstein_tower\irisovalnik.h
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+	<vector>
+	"Metek.h"
+	"Monkey.h"
+	"Enemie.h"
+	"Zeblji.h"
+	"Kontrolni_elementi.h"
+	"Kontrolni_obraz.h"
+
+1548775825 source:c:\codeblocks\projects\igra\wolfenstein_tower\inicializator.cpp
+	"Inicializator.h"
+	<iostream>
+
+1548773130 c:\codeblocks\projects\igra\wolfenstein_tower\inicializator.h
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<iostream>
+	<sstream>
+	<vector>
+	"Monkey.h"
+	"Metek.h"
+	"Enemie.h"
+	"Zeblji.h"
 

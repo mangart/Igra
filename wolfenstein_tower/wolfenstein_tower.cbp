@@ -39,10 +39,30 @@
 			<Add library="sfml-system" />
 			<Add directory="C:/CodeBlocks/sfml/lib" />
 		</Linker>
+		<Unit filename="Detekcija_trkov.cpp" />
+		<Unit filename="Detekcija_trkov.h" />
 		<Unit filename="Enemie.cpp" />
 		<Unit filename="Enemie.h" />
 		<Unit filename="Fizika.cpp" />
 		<Unit filename="Fizika.h" />
+		<Unit filename="Inicializator.cpp" />
+		<Unit filename="Inicializator.h" />
+		<Unit filename="Irisovalnik.cpp" />
+		<Unit filename="Irisovalnik.h" />
+		<Unit filename="Kontrolni_elementi.cpp" />
+		<Unit filename="Kontrolni_elementi.h" />
+		<Unit filename="Kontrolni_obraz.cpp" />
+		<Unit filename="Kontrolni_obraz.h" />
+		<Unit filename="Metek.cpp" />
+		<Unit filename="Metek.h" />
+		<Unit filename="Monkey.cpp" />
+		<Unit filename="Monkey.h" />
+		<Unit filename="Skrbnik_dogodkov.cpp" />
+		<Unit filename="Skrbnik_dogodkov.h" />
+		<Unit filename="Stopnja.cpp" />
+		<Unit filename="Stopnja.h" />
+		<Unit filename="Zeblji.cpp" />
+		<Unit filename="Zeblji.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

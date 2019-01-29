@@ -14,7 +14,7 @@ void Stopnja::Kalibriraj(int izbrana_stopnja)
         zacetno_zdravje = 1;
         stevilo_nasprotnikov = 1;
         max_nasprotnikov = 50;
-        max_zdravje = 20;
+        max_zdravje = 30;
         max_hitrost = 300;
         korak_hitrosti = 5;
         korak_nasprotnikov = 1;
@@ -26,7 +26,7 @@ void Stopnja::Kalibriraj(int izbrana_stopnja)
         zacetno_zdravje = 2;
         stevilo_nasprotnikov = 2;
         max_nasprotnikov = 75;
-        max_zdravje = 40;
+        max_zdravje = 50;
         max_hitrost = 500;
         korak_hitrosti = 2;
         korak_nasprotnikov = 2;
@@ -38,7 +38,7 @@ void Stopnja::Kalibriraj(int izbrana_stopnja)
         zacetno_zdravje = 5;
         stevilo_nasprotnikov = 4;
         max_nasprotnikov = 100;
-        max_zdravje = 60;
+        max_zdravje = 70;
         max_hitrost = 700;
         korak_hitrosti = 5;
         korak_nasprotnikov = 4;
@@ -58,25 +58,25 @@ void Stopnja::Kalibriraj(int izbrana_stopnja)
     }
 }
 
-void Stopnja::Naslednji_level(std::vector<Enemie> &enem,sf::Texture &texGuard,sf::Texture &texOficer, sf::Texture &texSS)
+void Stopnja::Naslednji_level()
 {
     for(int i = 0;i < stevilo_nasprotnikov;i++)
     {
         int stevilo = rand() % 3;
         if(stevilo == 0)
         {
-            Enemie enemie1(texGuard,10,zacetno_zdravje,zacetna_hitrost,3,-100 * (i + 1),625.f,300,1);
-            enem.push_back(enemie1);
+            Enemie enemie1(guard,10,zacetno_zdravje,zacetna_hitrost,3,-100 * (i + 1),625.f,300,1);
+            enemies.push_back(enemie1);
         }
         else if(stevilo == 1)
         {
-             Enemie enemie1(texOficer,10,zacetno_zdravje,zacetna_hitrost + 20,3,-100 * (i + 1),625.f,300,2);
-            enem.push_back(enemie1);
+             Enemie enemie1(oficer,10,zacetno_zdravje,zacetna_hitrost + 20,3,-100 * (i + 1),625.f,300,2);
+            enemies.push_back(enemie1);
         }
         else if(stevilo == 2)
         {
-             Enemie enemie1(texSS,10,zacetno_zdravje,zacetna_hitrost + 10,3,-100 * (i + 1),625.f,300,3);
-            enem.push_back(enemie1);
+             Enemie enemie1(ss,10,zacetno_zdravje,zacetna_hitrost + 10,3,-100 * (i + 1),625.f,300,3);
+            enemies.push_back(enemie1);
         }
     }
     if(zacetna_hitrost < max_hitrost)
