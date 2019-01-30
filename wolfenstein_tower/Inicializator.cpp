@@ -178,6 +178,45 @@ text2.setCharacterSize(24); // in pixels, not points!
 text2.setFillColor(sf::Color::Red);
 text2.setPosition(sf::Vector2f(1600.f, 40.f));
 
+Highscori[0].setFont(font);
+Highscori[0].setString("");
+Highscori[0].setCharacterSize(24); // in pixels, not points!
+Highscori[0].setFillColor(sf::Color::Red);
+Highscori[0].setPosition(sf::Vector2f(800.f, 300.f));
+
+Highscori[1].setFont(font);
+Highscori[1].setString("");
+Highscori[1].setCharacterSize(24); // in pixels, not points!
+Highscori[1].setFillColor(sf::Color::Red);
+Highscori[1].setPosition(sf::Vector2f(800.f, 400.f));
+
+Highscori[2].setFont(font);
+Highscori[2].setString("");
+Highscori[2].setCharacterSize(24); // in pixels, not points!
+Highscori[2].setFillColor(sf::Color::Red);
+Highscori[2].setPosition(sf::Vector2f(800.f, 500.f));
+
+Highscori[3].setFont(font);
+Highscori[3].setString("");
+Highscori[3].setCharacterSize(24); // in pixels, not points!
+Highscori[3].setFillColor(sf::Color::Red);
+Highscori[3].setPosition(sf::Vector2f(800.f, 600.f));
+
+Highscori[4].setFont(font);
+Highscori[4].setString("");
+Highscori[4].setCharacterSize(24); // in pixels, not points!
+Highscori[4].setFillColor(sf::Color::Red);
+Highscori[4].setPosition(sf::Vector2f(800.f, 700.f));
+
+
+
+
+vpisano_ime.setFont(font); // font is a sf::Font
+vpisano_ime.setString("");
+vpisano_ime.setCharacterSize(24); // in pixels, not points!
+vpisano_ime.setFillColor(sf::Color::Red);
+vpisano_ime.setPosition(sf::Vector2f(820.f, 300.f));
+
 ozad.setTexture(ozadje);
 ozad.setTextureRect(sf::IntRect(0, 0, 64, 64));
 ozad.setPosition(sf::Vector2f(0.f, 0.f)); // absolute position

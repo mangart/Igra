@@ -9,6 +9,8 @@
 
 extern int stanje_igre;
 extern int denar;
+extern sf::Text vpisano_ime;
+extern std::string ime;
 
 class Skrbnik_dogodkov
 {
@@ -21,6 +23,7 @@ class Skrbnik_dogodkov
         void dogodki_v_izbiranju_zahtevnosti(sf::RenderWindow &win);
         void priprava_na_igro_dogodki(std::vector<Monkey> &mon, std::vector<Zeblji> &zeb, sf::CircleShape &krog,Monkey &opica,Zeblji &zebl, sf::RenderWindow &win);
         void najboljsi_rezultati_dogodki(sf::RenderWindow &win);
+        void vpisi_ime_dogodki(sf::RenderWindow &win);
 
     protected:
 
@@ -30,6 +33,7 @@ class Skrbnik_dogodkov
         bool preveri_pot(int x, int y);
         bool preveri_opice(std::vector<Monkey> &mon, int x, int y);
         bool preveri_pot_zebli(int x, int y);
+
 };
 
 #endif // SKRBNIK_DOGODKOV_H

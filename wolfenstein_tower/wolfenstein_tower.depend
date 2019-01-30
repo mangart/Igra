@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548775944 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
+1548856791 source:c:\codeblocks\projects\igra\wolfenstein_tower\main.cpp
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -18,6 +18,7 @@
 	"Stopnja.h"
 	"Irisovalnik.h"
 	"Inicializator.h"
+	"Bralnik_datotek.h"
 
 1525812018 c:\codeblocks\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -480,14 +481,14 @@
 1548249213 c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_obraz.h
 	<SFML/Graphics.hpp>
 
-1548773742 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
+1548843020 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
 	<iostream>
 	<vector>
 	<SFML/Graphics.hpp>
 	"Monkey.h"
 	"Zeblji.h"
 
-1548773810 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
+1548856426 source:c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.cpp
 	"Skrbnik_dogodkov.h"
 	<iostream>
 
@@ -624,10 +625,10 @@
 	"Enemie.h"
 	<SFML/Graphics.hpp>
 
-1548775553 source:c:\codeblocks\projects\igra\wolfenstein_tower\irisovalnik.cpp
+1548854217 source:c:\codeblocks\projects\igra\wolfenstein_tower\irisovalnik.cpp
 	"Irisovalnik.h"
 
-1548775553 c:\codeblocks\projects\igra\wolfenstein_tower\irisovalnik.h
+1548854217 c:\codeblocks\projects\igra\wolfenstein_tower\irisovalnik.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -639,11 +640,11 @@
 	"Kontrolni_elementi.h"
 	"Kontrolni_obraz.h"
 
-1548775825 source:c:\codeblocks\projects\igra\wolfenstein_tower\inicializator.cpp
+1548854270 source:c:\codeblocks\projects\igra\wolfenstein_tower\inicializator.cpp
 	"Inicializator.h"
 	<iostream>
 
-1548773130 c:\codeblocks\projects\igra\wolfenstein_tower\inicializator.h
+1548854005 c:\codeblocks\projects\igra\wolfenstein_tower\inicializator.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<iostream>
@@ -653,4 +654,25 @@
 	"Metek.h"
 	"Enemie.h"
 	"Zeblji.h"
+
+1548855696 source:c:\codeblocks\projects\igra\wolfenstein_tower\ime_in_tocke.cpp
+	"Ime_in_tocke.h"
+
+1548855668 c:\codeblocks\projects\igra\wolfenstein_tower\ime_in_tocke.h
+	<iostream>
+	<string>
+
+1548856279 source:c:\codeblocks\projects\igra\wolfenstein_tower\bralnik_datotek.cpp
+	"Bralnik_datotek.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+
+1548855949 c:\codeblocks\projects\igra\wolfenstein_tower\bralnik_datotek.h
+	<iostream>
+	<string>
+	<SFML/Graphics.hpp>
+	"Ime_in_tocke.h"
 

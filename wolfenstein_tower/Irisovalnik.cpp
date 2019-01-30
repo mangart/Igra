@@ -122,6 +122,10 @@ void Irisovalnik::izrisi_rezultate(sf::RenderWindow &win)
 {
     win.draw(ostali_meniji);
     win.draw(najboljsi_rezultati2);
+    for(int i = 0;i < 5;i++)
+    {
+        win.draw(Highscori[i]);
+    }
     win.draw(nazaj1);
 }
 
@@ -129,6 +133,7 @@ void Irisovalnik::izrisi_vpisi_ime(sf::RenderWindow &win)
 {
     win.draw(ostali_meniji);
     win.draw(vpisi_svoje_ime);
+    win.draw(vpisano_ime);
     win.draw(potrdi);
 }
 

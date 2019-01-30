@@ -50,6 +50,8 @@ extern    sf::Font font;
 extern    sf::Text text;
 extern    sf::Text text1;
 extern    sf::Text text2;
+extern    sf::Text vpisano_ime;
+extern    sf::Text Highscori[5];
 
 extern    int denar;
 extern    int zivljenja;

@@ -16,6 +16,8 @@ extern int stanje_igre;
 extern    sf::Text text;
 extern    sf::Text text1;
 extern    sf::Text text2;
+extern    sf::Text vpisano_ime;
+extern    sf::Text Highscori[5];
 
 extern    sf::Sprite ozad;
 extern    sf::Sprite pot1;

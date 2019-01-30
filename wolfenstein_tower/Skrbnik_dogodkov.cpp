@@ -30,6 +30,10 @@ void Skrbnik_dogodkov::obravnavaj_dogodke(std::vector<Monkey> &mon, std::vector<
     {
         najboljsi_rezultati_dogodki(win);
     }
+    else if(stanje_igre == 5)
+    {
+        vpisi_ime_dogodki(win);
+    }
 
 }
 
@@ -258,7 +262,7 @@ void Skrbnik_dogodkov::dogodki_v_zacetnem_meniju(sf::RenderWindow &win)
             else if(stvar_pritisnjena == 12)
             {
                 stvar_pritisnjena = 0;
-                stanje_igre = 6;
+                stanje_igre = 260;
             }
             else if(stvar_pritisnjena == 13)
             {
@@ -548,6 +552,321 @@ void Skrbnik_dogodkov::najboljsi_rezultati_dogodki(sf::RenderWindow &win)
             }
         }
 }
+
+void Skrbnik_dogodkov::vpisi_ime_dogodki(sf::RenderWindow &win)
+{
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+    {
+        stvar_pritisnjena = 100;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+    {
+        stvar_pritisnjena = 101;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::C))
+    {
+        stvar_pritisnjena = 102;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+    {
+        stvar_pritisnjena = 103;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+    {
+        stvar_pritisnjena = 104;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::F))
+    {
+        stvar_pritisnjena = 105;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::G))
+    {
+        stvar_pritisnjena = 106;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::H))
+    {
+        stvar_pritisnjena = 107;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::I))
+    {
+        stvar_pritisnjena = 108;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::J))
+    {
+        stvar_pritisnjena = 109;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::K))
+    {
+        stvar_pritisnjena = 110;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::L))
+    {
+        stvar_pritisnjena = 111;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+    {
+        stvar_pritisnjena = 112;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::N))
+    {
+        stvar_pritisnjena = 113;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::O))
+    {
+        stvar_pritisnjena = 114;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
+    {
+        stvar_pritisnjena = 115;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+    {
+        stvar_pritisnjena = 116;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+    {
+        stvar_pritisnjena = 117;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+    {
+        stvar_pritisnjena = 118;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::T))
+    {
+        stvar_pritisnjena = 119;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::U))
+    {
+        stvar_pritisnjena = 120;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::X))
+    {
+        stvar_pritisnjena = 121;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Y))
+    {
+        stvar_pritisnjena = 122;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+    {
+        stvar_pritisnjena = 123;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::V))
+    {
+        stvar_pritisnjena = 124;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+    {
+        stvar_pritisnjena = 125;
+    }
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
+    {
+        stvar_pritisnjena = 126;
+    }
+    else
+    {
+        if(stvar_pritisnjena == 100)
+        {
+            ime += "A";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 101)
+        {
+            ime += "B";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 102)
+        {
+            ime += "C";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 103)
+        {
+            ime += "D";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 104)
+        {
+            ime += "E";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 105)
+        {
+            ime += "F";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 106)
+        {
+            ime += "G";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 107)
+        {
+            ime += "H";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 108)
+        {
+            ime += "I";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 109)
+        {
+            ime += "j";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 110)
+        {
+            ime += "K";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 111)
+        {
+            ime += "L";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 112)
+        {
+            ime += "M";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 113)
+        {
+            ime += "N";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 114)
+        {
+            ime += "O";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 115)
+        {
+            ime += "P";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 116)
+        {
+            ime += "Q";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 117)
+        {
+            ime += "R";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 118)
+        {
+            ime += "S";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 119)
+        {
+            ime += "T";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 120)
+        {
+            ime += "U";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 121)
+        {
+            ime += "X";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 122)
+        {
+            ime += "Y";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 123)
+        {
+            ime += "W";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 124)
+        {
+            ime += "V";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 125)
+        {
+            ime += "Z";
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+        else if(stvar_pritisnjena == 126)
+        {
+            ime = ime.substr(0, ime.size()-1);
+            vpisano_ime.setString(ime);
+            stvar_pritisnjena = 0;
+        }
+
+    }
+
+    if((sf::Mouse::isButtonPressed(sf::Mouse::Left)))
+    {
+        sf::Vector2i localPosition = sf::Mouse::getPosition(win);
+        if(stvar_pritisnjena == 0)
+        {
+            if((localPosition.x >= 760 && localPosition.x <= 1016) && (localPosition.y >= 700 && localPosition.y <= 764))
+            {
+                stvar_pritisnjena = 220;
+            }
+            else
+            {
+                stvar_pritisnjena = 0;
+            }
+        }
+        else if(stvar_pritisnjena == 220)
+        {
+            if((localPosition.x >= 760 && localPosition.x <= 1016) && (localPosition.y >= 700 && localPosition.y <= 764))
+            {
+                stvar_pritisnjena = 220;
+            }
+            else
+            {
+                stvar_pritisnjena = 0;
+            }
+        }
+    }
+    else
+    {
+            if(stvar_pritisnjena == 220)
+            {
+                stvar_pritisnjena = 0;
+                stanje_igre = 250;
+            }
+    }
+
+}
+
 
 Skrbnik_dogodkov::~Skrbnik_dogodkov()
 {

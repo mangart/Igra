@@ -16,6 +16,7 @@
 #include "Stopnja.h"
 #include "Irisovalnik.h"
 #include "Inicializator.h"
+#include "Bralnik_datotek.h"
 
 int zivljenja = 100;
 int stanje_igre = 0;
@@ -64,6 +65,8 @@ Stopnja upravitelj_stopenj;
     sf::Text text;
     sf::Text text1;
     sf::Text text2;
+    sf::Text vpisano_ime;
+    sf::Text Highscori[5];
 
     sf::Sprite ozad;
     sf::Sprite pot1;
@@ -92,6 +95,11 @@ Stopnja upravitelj_stopenj;
     sf::Sprite nazaj2;
     sf::Sprite vpisi_svoje_ime;
     sf::Sprite potrdi;
+
+    Bralnik_datotek bralnik;
+
+
+std::string ime;
 
 std::vector<Monkey> monkeys;
 std::vector<Zeblji> vsi_zeblji;
@@ -238,7 +246,25 @@ Irisovalnik izrisovalnik;
         {
             zivljenja = 100;
             denar = 600;
+            toc.str("");
+            toc.clear();
+            toc << tocke;
+            glasba_igra.stop();
+            glasba_meni.play();
+            vpisano_ime.setString("Tocke: " + toc.str());
             stanje_igre = 5;
+        }
+        if(stanje_igre == 250)
+        {
+            bralnik.dodaj_zapis(ime,tocke);
+            stanje_igre = 260;
+        }
+        if(stanje_igre == 260)
+        {
+            tocke = 0;
+            ime = "";
+            bralnik.preberi_datoteko();
+            stanje_igre = 6;
         }
 
     }
