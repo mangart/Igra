@@ -481,7 +481,7 @@
 1548249213 c:\codeblocks\projects\igra\wolfenstein_tower\kontrolni_obraz.h
 	<SFML/Graphics.hpp>
 
-1548843020 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
+1548935248 c:\codeblocks\projects\igra\wolfenstein_tower\skrbnik_dogodkov.h
 	<iostream>
 	<vector>
 	<SFML/Graphics.hpp>

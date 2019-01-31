@@ -257,11 +257,13 @@ void Skrbnik_dogodkov::dogodki_v_zacetnem_meniju(sf::RenderWindow &win)
             if(stvar_pritisnjena == 11)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 1;
             }
             else if(stvar_pritisnjena == 12)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 260;
             }
             else if(stvar_pritisnjena == 13)
@@ -365,26 +367,31 @@ void Skrbnik_dogodkov::dogodki_v_izbiranju_zahtevnosti(sf::RenderWindow &win)
             if(stvar_pritisnjena == 21)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 50;
             }
             else if(stvar_pritisnjena == 22)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 51;
             }
             else if(stvar_pritisnjena == 23)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 52;
             }
             else if(stvar_pritisnjena == 24)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 53;
             }
             else if(stvar_pritisnjena == 25)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 0;
             }
         }
@@ -548,6 +555,7 @@ void Skrbnik_dogodkov::najboljsi_rezultati_dogodki(sf::RenderWindow &win)
             if(stvar_pritisnjena == 31)
             {
                 stvar_pritisnjena = 0;
+                odpiranje_vrat2.play();
                 stanje_igre = 0;
             }
         }

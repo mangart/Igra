@@ -11,6 +11,7 @@ extern int stanje_igre;
 extern int denar;
 extern sf::Text vpisano_ime;
 extern std::string ime;
+extern sf::Sound odpiranje_vrat2;
 
 class Skrbnik_dogodkov
 {
